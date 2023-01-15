@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class SampleController {
     @GetMapping
     public Object getCurrentUser(OAuth2AuthenticationToken oAuth2AuthenticationToken){
+        /**
+         * PRINCIPAL OBJECT WILL GIVE THE SUER DETAILS
+         */
         return oAuth2AuthenticationToken.getPrincipal().getAttributes();
     }
 }
